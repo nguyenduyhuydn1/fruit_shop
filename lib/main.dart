@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_shop/presentation/screens/home/home_screen.dart';
+import 'package:fruit_shop/config/constants/size_config.dart';
+
+import 'package:fruit_shop/presentation/screens/intro/intro_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,8 +12,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return const MaterialApp(
-      home: HomeScreen(),
-    );
+        debugShowCheckedModeBanner: false, home: IntroScreen());
   }
 }
